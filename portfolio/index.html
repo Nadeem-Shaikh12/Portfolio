@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -40,25 +41,25 @@
             <div class="collapse pr-3 navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav  mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#home">Home</a>
+                        <a class="nav-link me-4" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#about">About</a>
+                        <a class="nav-link me-4" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#journey">Journey</a>
+                        <a class="nav-link me-4" href="#journey">Journey</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#skills">Skills</a>
+                        <a class="nav-link me-4" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#projects">Projects</a>
+                        <a class="nav-link me-4" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#certificate">Certificate</a>
+                        <a class="nav-link me-4" href="#certificate">Certificate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#contact">Contact</a>
+                        <a class="nav-link me-4" href="#contact">Contact</a>
                     </li>
 
                 </ul>
@@ -71,9 +72,7 @@
         <header style="height: 100vh" class="text-center d-flex align-items-center">
             <div class="container text-white">
                 <h1 class="display-4 fw-bold">Welcome to <span class="text-warning">My Portfolio</span></h1>
-                <p class="lead">Passionate about bridging web development, UI/UX designer, Cyber Security and Data
-                    Science,
-                    driven to create impactful solutions.</p>
+                <p class="lead">Merging creativity and logic to build smarter, safer, and stunning web experiences.</p>
                 <a href="#projects" class="btn btn-warning btn-lg mt-3">See My Work</a>
             </div>
         </header>
@@ -84,20 +83,27 @@
         <div class="container h-100 d-flex flex-column">
             <p class="text-center hello-text" style="font-size:16px">Get To Know</p>
             <h1 class="text-center mb-4">About Me</h1>
-            <div class="row flex-grow-1 align-items-center justify-content-center">
-                <div class="col-md-5">
-                    <img src="images/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg"
-                        alt="Your photo" class="img-fluid rounded" />
+            <div class="row flex-grow-1 align-items-center justify-content-center text-center text-md-start">
+                <div class="col-12 col-md-5 mb-4 mb-md-0 d-flex justify-content-center">
+
+                    <img src="images/Nadeem.jpg" alt="Your photo" class="profile-pic animated-img" />
                 </div>
-                <div class="col-md-5">
+                <div class="col-12 col-md-5">
                     <p class="text-center hello-text">Hello, I'm</p>
                     <h1 class="text-center name-heading">Shaikh Nadeem</h1>
                     <p class="text-center field-text">Frontend Devolper | UI/UX Designer & Data Analytics</p>
                     <div class="text-center">
-                        <button type="button" class="btn btn-outline-light"
-                            style="border: 2px solid black;  color: black; background-color: white; transition: 0.3s ease-in-out;">Resume</button>
-                        <button type="button" class="btn btn-outline-dark"
-                            style="border: 2px solid black;  color: white; background-color: black;">Contact Me</button>
+                        <button class="btn btn-dark mb-2" onclick="">
+                            Resume
+                        </button>
+
+                        <button class="btn btn-outline-dark mb-2"
+                            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+                            Contact
+                        </button>
+
+
+
                     </div>
                     <div class="social-icons text-center mt-4">
                         <a
@@ -105,7 +111,7 @@
                                 class="fa-brands fa-linkedin fa-2xl" style="color: #4d9ad5;"></i></a>
                         <a href="https://github.com/Nadeem-Shaikh12" class="ms-2"><i class="fa-brands fa-github fa-2xl"
                                 style="color: #00040a;"></i></a>
-                        <a href="" class="ms-2"><i class="fa-brands fa-square-x-twitter fa-2xl"
+                        <a href="https://x.com/NadeemShaikh124?t=T1rE06UR2pWedrJzqJYRQw&s=08" class="ms-2"><i class="fa-brands fa-square-x-twitter fa-2xl"
                                 style="color: #000205;"></i></a>
                     </div>
                 </div>
@@ -114,14 +120,14 @@
     </section>
 
     <!--Journey-->
-    <section id="journey" style="height: 130vh;">
+    <section id="journey" class="py-5">
         <div class="container">
             <p class="text-center hello-text" style="font-size:16px">Get To Know</p>
             <h1 class="text-center mb-5">My Journey</h1>
             <div class="row g-4">
 
                 <!-- Left Column: Introduction + Highlights -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-4">
                     <h3 class="mb-3">Education</h3>
                     <p class="my-detail">
                         Hi, I'm <span class="highlighted-name">Shaikh Nadeem</span>, a
@@ -136,7 +142,7 @@
 
                     <!-- Project & Experience Summary Cards -->
                     <div class="row mt-4">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center" style="background-color: #f1e3ff;">
                                     <h1 class="mt-3 text-primary-emphasis"
@@ -148,7 +154,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center" style="background-color: #ddf7ff;">
                                     <h1 class="mt-3" style="color: #07a0d3; font-family: Roboto; font-weight: bolder;">
@@ -162,7 +168,7 @@
 
                     <!-- Personal Qualities -->
                     <div class="row mt-4">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-4">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center">
                                     <i class="fa-solid fa-medal fa-2xl" style="color: #FFD43B;"></i>
@@ -170,7 +176,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-4">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center">
                                     <i class="fa-solid fa-users fa-2xl" style="color: #63E6BE;"></i>
@@ -178,7 +184,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-4">
                             <div class="card shadow border-0">
                                 <div class="card-body text-center">
                                     <i class="fa-regular fa-lightbulb fa-2xl" style="color: #f0b40f;"></i>
@@ -190,7 +196,7 @@
                 </div>
 
                 <!-- Right Column: Education Cards -->
-                <div class="col-md-6 ">
+                <div class="col-12 col-md-6 mt-5">
                     <div class="row mt-5">
                         <!-- B.Tech Card -->
                         <div class="col-12 mb-4">
@@ -232,34 +238,30 @@
                 <div class="col-md-6 mb-4">
 
                     <div class="card shadow border-0">
-                        <div class="card-body text-center">
-                            <i class="fas fa-award fa-2x" style="color: red;"></i>
-                            <h4 class="mt-3">B.Tech in Computer Science</h4>
-                            <p class="text-muted">Web Development</p>
-                            <p class="text-muted"><span style="color: blueviolet;">MGM University</span><br />2023 -
-                                2027</p>
+                        <div class="card-body">
+                            <h4 class="mt-3">KaamShaala</h4>
+                            <p class="text-muted">Feb 2025 - Present</p>
+                            <p class="text-muted"><span style="color: blueviolet;"></span><br /></p>
 
                             <!-- Trigger Modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
-                                Launch static backdrop modal
+                                View Details
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card shadow border-0">
-                        <div class="card-body text-center">
-                            <i class="fas fa-award fa-2x" style="color: red;"></i>
-                            <h4 class="mt-3">B.Tech in Computer Science</h4>
-                            <p class="text-muted">Web Development</p>
-                            <p class="text-muted"><span style="color: blueviolet;">MGM University</span><br />2023 -
-                                2027</p>
+                        <div class="card-body">
+                            <h4 class="mt-3">Landlord-Tenant Management App</h4>
+                            <p class="text-muted">April 2025 - Present</p>
+                            <p class="text-muted"><span style="color: blueviolet;"></span><br /></p>
 
                             <!-- Trigger Modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop1">
-                                Launch static backdrop
+                                View Details
                             </button>
                         </div>
                     </div>
@@ -273,15 +275,14 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Gift Voucher</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">KaamShaala</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        🎁 Congratulations! You've unlocked a special reward!
+                        Doing Now...
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
@@ -293,15 +294,14 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdrop1Label">Gift Voucher</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdrop1Label">Landlord-Tenant Management App</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        🎁 Congratulations! You've unlocked a special
+                        Doing Now...
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
@@ -309,243 +309,205 @@
 
     </section>
 
-    <!--Skills Section-->
-    <section id="skills" style="min-height: 100vh;">
-        <div class="container py-5">
-            <p class="text-center hello-text" style="font-size:16px">Explore My</p>
-            <h1 class="text-center mb-5">Skills</h1>
-            <div class="row row-cols-2 row-cols-md-5 g-4 text-center justify-content-center">
+    <!-- Skills Section -->
+<section id="skills" style="min-height: 100vh;">
+  <div class="container py-5">
+    <p class="text-center hello-text" style="font-size:16px">Explore My</p>
+    <h1 class="text-center mb-5">Skills</h1>
 
-                <!-- HTML -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" width="60" />
-                    <h6 class="mt-2">HTML</h6>
-                </div>
+    <!-- Responsive grid layout -->
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4 text-center justify-content-center">
 
-                <!-- CSS -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="60" />
-                    <h6 class="mt-2">CSS</h6>
-                </div>
+      <!-- HTML -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">HTML</h6>
+      </div>
 
-                <!-- Bootstrap -->
-                <div class="col-md-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="img-fluid"
-                        width="60" />
-                    <h5 class="mt-2">Bootstrap</h5>
-                </div>
+      <!-- CSS -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">CSS</h6>
+      </div>
 
-                <!-- JavaScript -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="60" />
-                    <h6 class="mt-2">JavaScript</h6>
-                </div>
+      <!-- Bootstrap -->
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="img-fluid" width="60" />
+        <h6 class="mt-2">Bootstrap</h6>
+      </div>
 
-                <!-- Node.js -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" width="60" />
-                    <h6 class="mt-2">Node.js</h6>
-                </div>
+      <!-- JavaScript -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">JavaScript</h6>
+      </div>
 
-                <!-- Express.js -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" width="60" />
-                    <h6 class="mt-2">Express.js</h6>
-                </div>
+      <!-- Node.js -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Node.js</h6>
+      </div>
 
-                <!-- React.js -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" width="60" />
-                    <h6 class="mt-2">React.js</h6>
-                </div>
+      <!-- Express.js -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Express.js</h6>
+      </div>
 
-                <!-- SQL -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4299/4299956.png" width="60" />
-                    <h6 class="mt-2">SQL</h6>
-                </div>
+      <!-- React.js -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">React.js</h6>
+      </div>
 
-                <!-- Python -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" width="60" />
-                    <h6 class="mt-2">Python</h6>
-                </div>
+      <!-- SQL -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/4299/4299956.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">SQL</h6>
+      </div>
 
-                <!-- Excel -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" width="60" />
-                    <h6 class="mt-2">Excel</h6>
-                </div>
+      <!-- Python -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Python</h6>
+      </div>
 
-                <!-- C Language -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" width="60" />
-                    <h6 class="mt-2">C</h6>
-                </div>
+      <!-- Excel -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Excel</h6>
+      </div>
 
-                <!-- Power BI -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5969/5969299.png" width="60" />
-                    <h6 class="mt-2">Power BI</h6>
-                </div>
+      <!-- C Language -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">C</h6>
+      </div>
 
-                <!-- Problem Solving -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/619/619034.png" width="60" />
-                    <h6 class="mt-2">Problem Solving</h6>
-                </div>
+      <!-- Power BI -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/5969/5969299.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Power BI</h6>
+      </div>
 
-                <!-- Git -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111288.png" width="60" />
-                    <h6 class="mt-2">Git</h6>
-                </div>
+      <!-- Problem Solving -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/619/619034.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Problem Solving</h6>
+      </div>
 
-                <!-- GitHub -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="60" />
-                    <h6 class="mt-2">GitHub</h6>
-                </div>
+      <!-- Git -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111288.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Git</h6>
+      </div>
 
-                <!-- Figma -->
-                <div class="col">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" width="60" />
-                    <h6 class="mt-2">Figma</h6>
-                </div>
+      <!-- GitHub -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">GitHub</h6>
+      </div>
 
+      <!-- Figma -->
+      <div class="col">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" class="img-fluid" width="60" />
+        <h6 class="mt-2">Figma</h6>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- Project Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <p class="text-center hello-text mt-4" style="font-size:16px">My Recent</p>
+    <h1 class="text-center mb-5">Projects</h1>
+
+    <div class="row g-4"> 
+      
+      <!-- Todo App -->
+      <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+        <div class="card h-100 shadow-sm card-hover">
+          <img src="images/todoApp.png" class="card-img-top img-fluid" alt="Todo App Screenshot">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title text-center">Todo App</h2>
+            <p class="card-text text-center"></p>
+            <div class="mt-auto d-flex justify-content-between">
+              <a href="https://nadeem-shaikh12.github.io/Todo-List-App/"
+                 class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
+              <a href="https://github.com/Nadeem-Shaikh12/Todo-List-App"
+                 class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-
-    <!-- Project Section -->
-    <section id="projects" style="height: 160vh">
-        <div class="container">
-            <p class="text-center hello-text mt-4" style="font-size:16px">My Recent</p>
-            <h1 class="text-center mb-5">Projects</h1>
-            <div class="row">
-
-                <!--Todo App-->
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/todoApp.png" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Todo App</h2>
-                            <p class="card-text text-center">A lightweight app to manage your daily tasks with priority
-                                and status tracking.</p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href="https://nadeem-shaikh12.github.io/Todo-List-App/"
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/Todo-List-App"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Wikipedia-->
-
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/Wikipedia.png" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Wikipedia</h2>
-                            <p class="card-text text-center"></p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href="https://nadeem-shaikh12.github.io/Wikipedia/"
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/Wikipedia"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Food Munch-->
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/FoodMunch.jpg" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Food Munch</h2>
-                            <p class="card-text text-center"></p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href="https://nadeem-shaikh12.github.io/FoodMunch/"
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/FoodMunch"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+      <!-- Wikipedia -->
+      <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+        <div class="card h-100 shadow-sm card-hover">
+          <img src="images/Wikipedia.png" class="card-img-top img-fluid" alt="Wikipedia Screenshot">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title text-center">Wikipedia</h2>
+            <p class="card-text text-center"></p>
+            <div class="mt-auto d-flex justify-content-between">
+              <a href="https://nadeem-shaikh12.github.io/Wikipedia/"
+                 class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
+              <a href="https://github.com/Nadeem-Shaikh12/Wikipedia"
+                 class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
             </div>
-
-            <div class="row">
-
-                <!--Gemini AI Clone-->
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/Gemini.avif" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Gemini AI Clone</h2>
-                            <p class="card-text text-center"></p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href=""
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/Gemini-AI-Clone"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Wikipedia-->
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/Wikipedia.png" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Wikipedia</h2>
-                            <p class="card-text text-center"></p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href="https://nadeem-shaikh12.github.io/Wikipedia/"
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/Wikipedia"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Food Munch-->
-                <div class="col-md-4 mb-4 fade-in-up">
-                    <div class="card h-100 shadow-sm card-hover" style="width: 100%;">
-                        <img src="images/FoodMunch.jpg" class="card-img-top" alt="Todo App Screenshot">
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title text-center">Food Munch</h2>
-                            <p class="card-text text-center"></p>
-                            <div class="mt-auto d-flex justify-content-between">
-                                <a href="https://nadeem-shaikh12.github.io/FoodMunch/"
-                                    class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
-                                <a href="https://github.com/Nadeem-Shaikh12/FoodMunch"
-                                    class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- Food Munch -->
+      <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+        <div class="card h-100 shadow-sm card-hover">
+          <img src="images/FoodMunch.jpg" class="card-img-top img-fluid" alt="Food Munch Screenshot">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title text-center">Food Munch</h2>
+            <p class="card-text text-center"></p>
+            <div class="mt-auto d-flex justify-content-between">
+              <a href="https://nadeem-shaikh12.github.io/FoodMunch/"
+                 class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
+              <a href="https://github.com/Nadeem-Shaikh12/FoodMunch"
+                 class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gemini AI Clone -->
+      <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+        <div class="card h-100 shadow-sm card-hover">
+          <img src="images/Gemini.avif" class="card-img-top img-fluid" alt="Gemini AI Clone Screenshot">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title text-center">Gemini AI Clone</h2>
+            <p class="card-text text-center"></p>
+            <div class="mt-auto d-flex justify-content-between">
+              <a href="https://nadeem-shaikh12.github.io/Gemini-AI-Clone/"
+                 class="btn btn-outline-success mb-2" target="_blank">Live Project</a>
+              <a href="https://github.com/Nadeem-Shaikh12/Gemini-AI-Clone"
+                 class="btn btn-outline-primary mb-2" target="_blank">View Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!--Cetificate Section-->
-    <section id="certificate">
+    <section id="certificate" class="py-5">
         <div class="container my-5">
             <p class="text-center hello-text" style="font-size:16px">My</p>
             <h1 class="text-center mb-4">Certificates & Achievements</h1>
 
             <div class="row g-4">
                 <!-- Certificate 1 -->
-                <div class="col-md-4">
+                <div class="col-12 col-sm-6 col-md-4">
                     <div class="card h-100 shadow border-0">
                         <img src="images/DataAnalytic.jpeg" class="card-img-top img-fluid rounded"
                             alt="Data Analytics Certificate" />
@@ -558,7 +520,7 @@
                 </div>
 
                 <!-- Certificate 2 -->
-                <div class="col-md-4">
+                <div class="col-12 col-sm-6 col-md-4">
                     <div class="card h-100 shadow border-0">
                         <img src="images/aws.jpeg" class="card-img-top img-fluid rounded" alt="AWS Cloud Certificate" />
                         <div class="card-body text-center">
@@ -570,7 +532,7 @@
                 </div>
 
                 <!-- Certificate 3 -->
-                <div class="col-md-4">
+                <div class="col-12 col-sm-6 col-md-4">
                     <div class="card h-100 shadow border-0">
                         <img src="images/generativeai.jpeg" class="card-img-top img-fluid rounded"
                             alt="Generative AI Certificate" />
@@ -586,7 +548,7 @@
 
                 <div class="row g-4">
                     <!-- Certificate 1 -->
-                    <div class="col-md-4">
+                    <div class="col-12 col-sm-6 col-md-4">
                         <div class="card h-100 shadow border-0">
                             <img src="images/WhatsApp Image 2025-06-12 at 14.52.22_12692daf.jpg"
                                 class="card-img-top img-fluid rounded" alt="Data Analytics Certificate" />
@@ -599,7 +561,7 @@
                     </div>
 
                     <!-- Certificate 2 -->
-                    <div class="col-md-4">
+                    <div class="col-12 col-sm-6 col-md-4">
                         <div class="card h-100 shadow border-0">
                             <img src="images/WhatsApp Image 2025-06-12 at 14.52.15_3ec24947.jpg"
                                 class="card-img-top img-fluid rounded" alt="AWS Cloud Certificate" />
@@ -612,7 +574,7 @@
                     </div>
 
                     <!-- Certificate 3 -->
-                    <div class="col-md-4">
+                    <div class="col-12 col-sm-6 col-md-4">
                         <div class="card h-100 shadow border-0">
                             <img src="images/DSA.jpeg" class="card-img-top img-fluid rounded"
                                 alt="Generative AI Certificate" />
@@ -631,81 +593,82 @@
     </section>
 
 
-    <!--Contact Setion-->
-    <section id="contact" style="min-height: 100vh;">
-        <div class="container">
-            <p class="text-center hello-text mt-4" style="font-size:16px">Get In Touch</p>
-            <h1 class="text-center mb-5">Contact Me</h1>
-            <div class="row">
-                <!-- Contact Info -->
-                <div class="col-md-5">
-                    <div class="p-4 border rounded bg-light shadow-sm">
-                        <h4>Get In Touch</h4>
-                        <p><i class="fa-solid fa-envelope me-2"></i> nadimshaikh74161@gmail.com</p>
-                        <p><i class="fa-solid fa-phone me-2"></i> +91 8149038485</p>
-                        <p><i class="fa-solid fa-location-pin me-2"></i> Aurangabad, Maharashtra</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="images/Gemini_Generated_Image_26home26home26ho.png" class="img-fluid rounded mt-2"
-                            style="max-height: 300px; object-fit: contain;" alt="Contact illustration" />
-                    </div>
-                    <p style="text-align: center; font-size: 1.1rem; color: #444; margin-top: 20px;">
-                        Got a question, project, or idea?<br>
-                        I’d love to hear from you — let’s connect and create something great together!
-                    </p>
+    <!-- Contact Section -->
+<section id="contact" class="py-5" style="min-height: 100vh;">
+  <div class="container">
+    <p class="text-center hello-text" style="font-size:16px">Get In Touch</p>
+    <h1 class="text-center mb-5">Contact Me</h1>
+    <div class="row g-4 align-items-center">
 
-
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-md-7">
-                    <form class="p-4 border rounded bg-white shadow-sm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" placeholder="Enter your message..."
-                                rows="3"></textarea>
-                        </div>
-
-                        <!-- Social Media Icons -->
-                        <div class="mt-4">
-                            <a href="https://www.linkedin.com/in/nadeem-shaikh-a8357a189" target="_blank">
-                                <i class="fa-brands fa-linkedin fa-2xl me-3" style="color: #0077b5;"></i>
-                            </a>
-                            <a href="https://github.com/Nadeem-Shaikh12" target="_blank">
-                                <i class="fa-brands fa-github fa-2xl me-3" style="color: #333;"></i>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i class="fa-brands fa-x-twitter fa-2xl" style="color: #000;"></i>
-                            </a>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="mb-3 d-flex justify-content-end mt-4">
-                            <button type="submit" class="btn btn-dark px-4">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <!-- Contact Info -->
+      <div class="col-12 col-md-5">
+        <div class="p-4 border rounded bg-light shadow-sm h-100">
+          <h4 class="mb-3">Get In Touch</h4>
+          <p><i class="fa-solid fa-envelope me-2"></i> nadimshaikh74161@gmail.com</p>
+          <p><i class="fa-solid fa-phone me-2"></i> +91 8149038485</p>
+          <p><i class="fa-solid fa-location-pin me-2"></i> Aurangabad, Maharashtra</p>
+          <div class="text-center mt-4">
+            <img src="images/Gemini_Generated_Image_26home26home26ho.png" class="img-fluid rounded"
+              style="max-height: 250px; object-fit: contain;" alt="Contact illustration" />
+          </div>
+          <p class="mt-3 text-center" style="font-size: 1.1rem; color: #444;">
+            Got a question, project, or idea?<br>
+            Let’s connect and build something great together!
+          </p>
         </div>
-    </section>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-12 col-md-7">
+        <form class="p-4 border rounded bg-white shadow-sm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" placeholder="Enter your message..." rows="3"></textarea>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="mt-4">
+            <a href="https://www.linkedin.com/in/nadeem-shaikh-a8357a189" target="_blank">
+              <i class="fa-brands fa-linkedin fa-xl me-3" style="color: #0077b5;"></i>
+            </a>
+            <a href="https://github.com/Nadeem-Shaikh12" target="_blank">
+              <i class="fa-brands fa-github fa-xl me-3" style="color: #333;"></i>
+            </a>
+            <a href="https://x.com/NadeemShaikh124?t=T1rE06UR2pWedrJzqJYRQw&s=08" target="_blank">
+              <i class="fa-brands fa-x-twitter fa-xl" style="color: #000;"></i>
+            </a>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="mb-3 d-flex justify-content-end mt-4">
+            <button type="submit" class="btn btn-dark px-4">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer-->
     <footer class="text-center text-white py-3">
-        <p>&copy; 2025 Shaikh Nadeem | All right reserved</p>
+        <p>&copy; 2025 Shaikh Nadeem </p>
     </footer>
     <!--Bootstrap Script Section-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+        <script src="/portfolio/script.js"></script>
 </body>
 
 </html>
