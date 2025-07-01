@@ -1,0 +1,374 @@
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: black; /* Bootstrap primary */
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Change link color on hover */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Animate underline on hover */
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+header{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+}
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.card{
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+footer{
+    background-color: #343a40;
+}
+.skill-circle {
+    width: 100px;
+    
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+.name-heading {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 180%;
+}
+.hello-text {
+    font-family: "Roboto";
+    font-size: 120%;
+    margin-top: 10px;
+}
+.field-text {
+    font-family: "Roboto";
+    font-size: 200%;
+    font-weight: 300;
+}
+.button {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+.coll-text {
+    font-family: "Roboto";
+    font-size: medium;
+    font-weight: 600;
+}
+.my-detail {
+    line-height: 1.8;
+    color: #333;
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+.highlighted-name{
+  color: #007bff;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.highlighted{
+  color: #6c63ff;
+  font-weight: 500;
+}
+.bold{
+  font-weight: 500;
+}
+.my-kno {
+    font-family: "Roboto";
+    font-size: medium;
+    font-weight: lighter;
+    vertical-align: middle;
+}
+
+
+
+/* ====== Contact Section Animation & Styling ====== */
+
+/* Entrance animation for elements */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to contact section elements */
+#contact h2,
+#contact .form-control,
+#contact .form-label,
+#contact p,
+#contact i,
+#contact button,
+#contact .col-md-5,
+#contact .col-md-7 {
+  animation: fadeInUp 0.8s ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Stagger entrance */
+#contact .col-md-5 {
+  animation-delay: 0.2s;
+}
+#contact .col-md-7 {
+  animation-delay: 0.4s;
+}
+
+/* Smooth focus animation for input fields */
+#contact .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Submit button hover interaction */
+#contact button:hover {
+  background-color: #0d6efd;
+  color: white;
+  transition: 0.3s ease;
+  transform: translateY(-2px);
+}
+
+/* Social icon hover animation */
+#contact .fa-brands:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/* Section spacing */
+#contact {
+  padding-top: 100px;
+}
+/* === Animated Social Icons in Contact Section === */
+#contact .fa-brands {
+  transition: transform 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  display: inline-block;
+  transform-origin: center;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Base Style */
+#contact .fa-brands {
+  font-size: 2rem;
+  padding: 12px;
+  margin-right: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Common Hover Animation */
+#contact .fa-brands:hover {
+  transform: scale(1.5) translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Brand Effects */
+#contact .fa-linkedin:hover {
+  color: #0A66C2;
+  box-shadow: 0 0 15px #0A66C2aa, 0 0 30px #0A66C2aa;
+}
+
+#contact .fa-github:hover {
+  color: #000000;
+  box-shadow: 0 0 15px #000000aa, 0 0 30px #000000aa;
+}
+
+#contact .fa-x-twitter:hover {
+  color: #1DA1F2;
+  box-shadow: 0 0 15px #1DA1F2aa, 0 0 30px #1DA1F2aa;
+}
+
+/* Optional: Pulse Glow Ring (Optional Fancy Style) */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
+  }
+}
+
+#contact .fa-brands:hover {
+  animation: pulse-glow 1s infinite;
+}
+
+
+/* About Section social-icons animation */
+
+.social-icons i {
+  font-size: 2rem;
+  padding: 8px;
+  margin: 0 8px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective: 800px;
+  position: relative;
+}
+
+/* Animate Outward Pop */
+.social-icons i:hover {
+  transform: translateZ(15px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+/* Individual Brand Colors & Glow */
+.social-icons .fa-linkedin:hover {
+  color: #0A66C2;
+  box-shadow: 0 10px 20px #0A66C280;
+}
+
+.social-icons .fa-github:hover {
+  color: #000;
+  box-shadow: 0 10px 20px #00000080;
+}
+
+.social-icons .fa-square-x-twitter:hover {
+  color: #1DA1F2;
+  box-shadow: 0 10px 20px #1DA1F280;
+}
+
+
+/* Button Animation */
+
+/* Base animation for both buttons */
+.animated-btn {
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, color 0.3s;
+  border: 2px solid black;
+  transform-style: preserve-3d;
+}
+
+/* Hover effect */
+.animated-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Resume: White background with dark border */
+.resume-btn {
+  background-color: white;
+  color: black;
+}
+
+.resume-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* Contact: Black background with white text */
+.contact-btn {
+  background-color: black;
+  color: white;
+}
+
+.contact-btn:hover {
+  background-color: #1a1a1a;
+}
+
+
+.fade-in-up {
+        animation: fadeInUp 1s ease forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hover animation */
+    .card-hover:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-hover img {
+        transition: transform 0.5s ease;
+    }
+
+    .card-hover:hover img {
+        transform: scale(1.05);
+    }
+
+
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;            /* perfect circle */
+    object-fit: cover;             /* crop image neatly */
+    border: 5px solid #ffffff;     /* white border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* soft shadow */
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Hover effect: elegant zoom + glow */
+.profile-pic:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Entry animation */
+@keyframes fadeZoomIn {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animated-img {
+    animation: fadeZoomIn 1s ease-out;
+}
