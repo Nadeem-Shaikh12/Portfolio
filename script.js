@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const typingElement = document.getElementById("typing-text");
     if (typingElement) {
         const roles = [
-            "Frontend Websites",
-            "Modern UI/UX Designs",
-            "Python Applications",
-            "Data Analytics Dashboards",
-            "Responsive Web Apps"
+            "Full-Stack Web Applications",
+            "Python Software & Automations",
+            "Modern React & JavaScript UIs",
+            "IoT & Embedded Systems",
+            "Data & Cloud Architectures"
         ];
         let roleIndex = 0;
         let charIndex = 0;
@@ -254,6 +254,67 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    // ----------------------------------------------------
+    // 6b. Skills Category Filter
+    // ----------------------------------------------------
+    const skillFilterButtons = document.querySelectorAll(".skill-filter-btn");
+    const skillItems = document.querySelectorAll(".skill-item");
+
+    if (skillFilterButtons.length > 0 && skillItems.length > 0) {
+        skillFilterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                skillFilterButtons.forEach(function (btn) {
+                    btn.classList.remove("active", "btn-dark");
+                    btn.classList.add("btn-outline-dark");
+                });
+                this.classList.add("active", "btn-dark");
+                this.classList.remove("btn-outline-dark");
+
+                const filterValue = this.getAttribute("data-skill-filter");
+
+                skillItems.forEach(function (item) {
+                    const itemCategory = item.getAttribute("data-category");
+                    if (filterValue === "all" || itemCategory === filterValue) {
+                        item.style.display = "block";
+                        setTimeout(function () {
+                            item.style.opacity = "1";
+                            item.style.transform = "scale(1)";
+                        }, 50);
+                    } else {
+                        item.style.opacity = "0";
+                        item.style.transform = "scale(0.85)";
+                        setTimeout(function () {
+                            item.style.display = "none";
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    // ----------------------------------------------------
+    // One-Click Copy to Clipboard Handler
+    // ----------------------------------------------------
+    const copyButtons = document.querySelectorAll(".copy-btn");
+    copyButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const textToCopy = this.getAttribute("data-copy");
+            if (!textToCopy) return;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalHtml = this.innerHTML;
+                this.classList.add("copied");
+                this.innerHTML = '<i class="fa-solid fa-check me-1"></i>Copied!';
+                setTimeout(() => {
+                    this.classList.remove("copied");
+                    this.innerHTML = originalHtml;
+                }, 2000);
+            }).catch(err => {
+                console.error("Clipboard copy failed: ", err);
+            });
+        });
+    });
 
     // ----------------------------------------------------
     // 7. Certificate Pagination & Modal Preview
