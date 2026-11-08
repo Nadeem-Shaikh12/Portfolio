@@ -167,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         counterElements.forEach(function (counter) {
             const target = parseInt(counter.getAttribute("data-target"), 10) || 0;
+            const hasPlus = target > 5;
             const duration = 1600; // ms
             const stepTime = 30; // ms
             const totalSteps = duration / stepTime;
@@ -176,10 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const timer = setInterval(function () {
                 current += increment;
                 if (current >= target) {
-                    counter.textContent = target + "+";
+                    counter.textContent = target + (hasPlus ? "+" : "");
                     clearInterval(timer);
                 } else {
-                    counter.textContent = Math.floor(current) + "+";
+                    counter.textContent = Math.floor(current) + (hasPlus ? "+" : "");
                 }
             }, stepTime);
         });
@@ -449,7 +450,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // If a real Web3Forms key is provided (not the default placeholder)
+            // 1. If Web3Forms key is provided
             if (accessKey && accessKey !== "YOUR_ACCESS_KEY_HERE") {
                 try {
                     const formData = new FormData(contactForm);
@@ -467,14 +468,54 @@ document.addEventListener("DOMContentLoaded", function () {
                         `;
                         alertBox.style.display = "flex";
                         contactForm.reset();
-                    } else {
-                        triggerMailto();
+                        return;
                     }
                 } catch (err) {
+                    console.warn("Web3Forms error, trying FormSubmit fallback...", err);
+                }
+            }
+
+            // 2. FormSubmit AJAX direct delivery to nadimshaikh74161@gmail.com
+            try {
+                const response = await fetch("https://formsubmit.co/ajax/nadimshaikh74161@gmail.com", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: senderName,
+                        email: senderEmail,
+                        message: senderMessage,
+                        _subject: `New Portfolio Message from ${senderName}`,
+                        _captcha: "false",
+                        _template: "table"
+                    })
+                });
+
+                const json = await response.json();
+
+                if (json.success === "true" || json.success === true) {
+                    alertBox.className = "alert alert-success mt-3 rounded-3 shadow-sm border-0 d-flex align-items-center";
+                    alertBox.innerHTML = `
+                        <i class="fa-solid fa-circle-check fa-lg text-success me-2"></i>
+                        <div>Thank you, <strong>${senderName}</strong>! Your message has been sent successfully to <strong>nadimshaikh74161@gmail.com</strong>. I'll get back to you shortly.</div>
+                    `;
+                    alertBox.style.display = "flex";
+                    contactForm.reset();
+                } else if (json.message && json.message.toLowerCase().includes("activation")) {
+                    alertBox.className = "alert alert-info mt-3 rounded-3 shadow-sm border-0 d-flex align-items-center";
+                    alertBox.innerHTML = `
+                        <i class="fa-solid fa-envelope-circle-check fa-lg text-primary me-2"></i>
+                        <div>Thank you, <strong>${senderName}</strong>! Form activation in progress. Check your inbox at <strong>nadimshaikh74161@gmail.com</strong> to confirm the one-time activation link to start receiving messages directly!</div>
+                    `;
+                    alertBox.style.display = "flex";
+                    contactForm.reset();
+                } else {
                     triggerMailto();
                 }
-            } else {
-                // Pre-fills and opens email client directly to nadimshaikh74161@gmail.com
+            } catch (err) {
+                // 3. Fallback to pre-filled mail client if offline or blocked
                 triggerMailto();
             }
 
