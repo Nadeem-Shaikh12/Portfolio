@@ -18,7 +18,7 @@ A modern, high-performance, and responsive personal portfolio website engineered
 * 🎯 **Dynamic Typewriter & Hero Glow:** Ambient multi-orb background lighting and an automated role typewriter effect.
 * ⚡ **Categorized Skills Matrix:** Interactive category filtering (*Frontend*, *Backend & DB*, *Core CS & Tools*) utilizing sharp vector Devicons.
 * 💼 **Comprehensive Projects Showcase:** Multi-category filtering (*Full-Stack*, *IoT & Blockchain*, *Web & APIs*) featuring:
-  * **[PROPACCURA (Live Demo)](https://prop-accra-final.vercel.app/):** Tenant-Landlord platform with role-based auth, dynamic dashboards, and automated rent tracking.
+  * **PROPACCURA ([Live Demo](https://prop-accra-final.vercel.app/) | [GitHub](https://github.com/Nadeem-Shaikh12/PropAccraFinal)):** Tenant-Landlord platform with role-based auth, dynamic dashboards, and automated rent tracking.
   * **[Blockchain Academic Certification Verification System (GitHub)](https://github.com/Nadeem-Shaikh12/Blockchain-Base-Academic-Certification-Verification-System):** Decentralized tamper-proof academic credential verification ledger.
   * **IoT Water Pump Controller:** Autonomous dual ESP8266 microcontroller system with sensor telemetry.
   * **Gemini AI Clone, Wikipedia Search, Speed Typing Test & more.**
